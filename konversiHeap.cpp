@@ -44,20 +44,12 @@ void konversiheap(){
 		if(heap[induk(i)] < heap[m]){
 			swap(heap[induk(i)],heap[m]);
 			
-			cout<<"index "<<m<<" tukar dengan induknya"<<endl;
-			
-			if(punyaanak(m)){
-				cout<<m<<" punya anak ";
-			}
-
 			int temp = m;
 			while(punyaanak(temp)==1){
 				int anak1, anak2;
 				anak1 = temp*2+1;
 				anak2 = temp*2+2;
 				int makanak1anak2 = mak(anak1,anak2);
-				
-				cout<<anak1<<" dan "<<anak2<<endl;
 				
 				if(heap[temp]< heap[makanak1anak2]){
 					swap(heap[temp],heap[makanak1anak2]);
